@@ -1,8 +1,7 @@
 package mincra.magicrod.listener;
 
-import mincra.magicrod.ai.MonsterAI;
-import mincra.magicrod.main.Magic;
-import mincra.magicrod.version.Version;
+import java.util.Random;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Material;
@@ -20,7 +19,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.metadata.FixedMetadataValue;
 
-import java.util.Random;
+import mincra.magicrod.ai.MonsterAI;
+import mincra.magicrod.main.Magic;
+import mincra.magicrod.version.Version;
 
 public class SpawnListener extends MonsterAI implements Listener{
 	private Magic plugin;
@@ -117,15 +118,15 @@ public class SpawnListener extends MonsterAI implements Listener{
 							mob.getEquipment().setItemInMainHand(new ItemStack(Material.IRON_SWORD));
 							Version.setStats(mob,0.340D);
 						}else if(hash<95){
-							mob.getEquipment().setHelmet(new ItemStack(Material.GOLD_HELMET));
-							mob.getEquipment().setChestplate(new ItemStack(Material.GOLD_CHESTPLATE));
-							mob.getEquipment().setLeggings(new ItemStack(Material.GOLD_LEGGINGS));
-							mob.getEquipment().setBoots(new ItemStack(Material.GOLD_BOOTS));
+							mob.getEquipment().setHelmet(new ItemStack(Material.GOLDEN_HELMET));
+							mob.getEquipment().setChestplate(new ItemStack(Material.GOLDEN_CHESTPLATE));
+							mob.getEquipment().setLeggings(new ItemStack(Material.GOLDEN_LEGGINGS));
+							mob.getEquipment().setBoots(new ItemStack(Material.GOLDEN_BOOTS));
 							mob.setMaxHealth(70);
 							mob.setHealth(70);
 							Version.setStats(mob,0.320D);
 							mob.setCustomName("Gold Zombie");
-							mob.getEquipment().setItemInMainHand(new ItemStack(Material.GOLD_SWORD));
+							mob.getEquipment().setItemInMainHand(new ItemStack(Material.GOLDEN_SWORD));
 						}else if(hash<99){
 							mob.getEquipment().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
 							mob.getEquipment().setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
@@ -178,10 +179,10 @@ public class SpawnListener extends MonsterAI implements Listener{
 						mob.setHealth(70);
 						Version.setStats(mob,0.340D);
 					}else if(hash<95){
-						mob.getEquipment().setHelmet(new ItemStack(Material.GOLD_HELMET));
-						mob.getEquipment().setChestplate(new ItemStack(Material.GOLD_CHESTPLATE));
-						mob.getEquipment().setLeggings(new ItemStack(Material.GOLD_LEGGINGS));
-						mob.getEquipment().setBoots(new ItemStack(Material.GOLD_BOOTS));
+						mob.getEquipment().setHelmet(new ItemStack(Material.GOLDEN_HELMET));
+						mob.getEquipment().setChestplate(new ItemStack(Material.GOLDEN_CHESTPLATE));
+						mob.getEquipment().setLeggings(new ItemStack(Material.GOLDEN_LEGGINGS));
+						mob.getEquipment().setBoots(new ItemStack(Material.GOLDEN_BOOTS));
 						mob.setCustomName("Gold Skeleton");
 						ItemStack weapon = new ItemStack(Material.BOW);
 						weapon.addEnchantment(new EnchantmentWrapper(48), 3);
@@ -336,7 +337,7 @@ public class SpawnListener extends MonsterAI implements Listener{
 						Version.setStats(mob,0.260D);
 						mob.setMaxHealth(50);
 						mob.setHealth(50);
-						ItemStack weapon = new ItemStack(Material.GOLD_SWORD);
+						ItemStack weapon = new ItemStack(Material.GOLDEN_SWORD);
 						weapon.addEnchantment(new EnchantmentWrapper(16), 1);
 						mob.getEquipment().setItemInMainHand(weapon);
 					}else if(hash<99){
@@ -345,7 +346,7 @@ public class SpawnListener extends MonsterAI implements Listener{
 						mob.getEquipment().setLeggings(new ItemStack(Material.CHAINMAIL_LEGGINGS));
 						mob.getEquipment().setBoots(new ItemStack(Material.CHAINMAIL_BOOTS));
 						mob.setCustomName("Chain Pigman");
-						ItemStack weapon = new ItemStack(Material.GOLD_SWORD);
+						ItemStack weapon = new ItemStack(Material.GOLDEN_SWORD);
 						weapon.addEnchantment(new EnchantmentWrapper(16), 2);
 						mob.getEquipment().setItemInMainHand(weapon);
 						mob.setMaxHealth(80);

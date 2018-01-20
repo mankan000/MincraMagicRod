@@ -38,11 +38,11 @@ public class LightListener implements Listener{
 					e.getPlayer().sendMessage(ChatColor.GRAY+"50M以上には光源を設置できません.");
 					e.setCancelled(true);
 					break;
-				case REDSTONE_TORCH_ON:
+				case REDSTONE_TORCH:
 					e.getPlayer().sendMessage(ChatColor.GRAY+"50M以上には光源を設置できません.");
 					e.setCancelled(true);
 					break;
-				case REDSTONE_LAMP_OFF:
+				case REDSTONE_LAMP:
 					e.getPlayer().sendMessage(ChatColor.GRAY+"50M以上には光源を設置できません.");
 					e.setCancelled(true);
 					break;

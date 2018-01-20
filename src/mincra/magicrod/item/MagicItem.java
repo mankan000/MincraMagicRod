@@ -1,6 +1,8 @@
 package mincra.magicrod.item;
 
-import mincra.magicrod.main.Magic;
+import java.util.Arrays;
+import java.util.List;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -9,8 +11,7 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.MaterialData;
 
-import java.util.Arrays;
-import java.util.List;
+import mincra.magicrod.main.Magic;
 
 public class MagicItem{
 	Magic plugin;
@@ -21,7 +22,7 @@ public class MagicItem{
 	public static ItemStack quartz = new ItemStack(Material.QUARTZ,1);
 	public static ItemStack magicTicket = new ItemStack(Material.PAPER,1);
 	public static ItemStack magicGoldTicket = new ItemStack(Material.PAPER,1);
-	public static ItemStack magicWeed = new ItemStack(Material.LONG_GRASS,1,(short)1);
+	public static ItemStack magicWeed = new ItemStack(Material.GRASS,1,(short)1);
 	public static ItemStack darkMatter = new ItemStack(Material.GLOWSTONE_DUST,1);
 	public static ItemStack magicArrow = new ItemStack(Material.ARROW,1);
 
@@ -116,7 +117,7 @@ public class MagicItem{
 					"qqq",
 					"qqq",
 					"qqq");
-			RecipeMagicItem4.setIngredient('q', Material.QUARTZ_ORE);
+			RecipeMagicItem4.setIngredient('q', Material.NETHER_QUARTZ_ORE);
 		plugin.getServer().addRecipe(RecipeMagicItem4);
 
 		//レシピがないアイテム
@@ -159,7 +160,7 @@ public class MagicItem{
 					"ddd",
 					"dwd",
 					"ddd");
-			RecipeMagicItem6.setIngredient('w', Material.LONG_GRASS,(short)1);
+			RecipeMagicItem6.setIngredient('w', Material.GRASS,(short)1);
 			RecipeMagicItem6.setIngredient('d', Material.DIAMOND_BLOCK);
 		plugin.getServer().addRecipe(RecipeMagicItem6);
 

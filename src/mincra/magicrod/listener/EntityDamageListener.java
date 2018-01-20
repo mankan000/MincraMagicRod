@@ -154,7 +154,7 @@ public class EntityDamageListener implements Listener {
 				loc2.add(l.getX(),l.getY(),l.getZ());
 				final Block blo=loc2.getBlock();
 				if(cnt<10){
-					if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.LONG_GRASS)||blo.getType().equals(Material.RED_ROSE)){
+					if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.GRASS)||blo.getType().equals(Material.POPPY)){
 						blo.setType(Material.ICE);
 				        new BukkitRunnable() {
 				        	Block clearblo=blo;
@@ -167,7 +167,7 @@ public class EntityDamageListener implements Listener {
 					new BukkitRunnable(){
 						Block blo2=blo;
 						public void run() {
-							if(blo2.getType().equals(Material.AIR)||blo2.getType().equals(Material.LONG_GRASS)||blo2.getType().equals(Material.RED_ROSE)){
+							if(blo2.getType().equals(Material.AIR)||blo2.getType().equals(Material.GRASS)||blo2.getType().equals(Material.POPPY)){
 								blo2.setType(Material.ICE);
 						        new BukkitRunnable() {
 						        	Block clearblo=blo2;
@@ -182,7 +182,7 @@ public class EntityDamageListener implements Listener {
 					new BukkitRunnable(){
 						Block blo2=blo;
 						public void run() {
-							if(blo2.getType().equals(Material.AIR)||blo2.getType().equals(Material.LONG_GRASS)||blo2.getType().equals(Material.RED_ROSE)){
+							if(blo2.getType().equals(Material.AIR)||blo2.getType().equals(Material.GRASS)||blo2.getType().equals(Material.POPPY)){
 								blo2.setType(Material.ICE);
 						        new BukkitRunnable() {
 						        	Block clearblo=blo2;
@@ -202,7 +202,7 @@ public class EntityDamageListener implements Listener {
 					loc2.add(l.getX(),l.getY(),l.getZ());
 					final Block blo=loc2.getBlock();
 				if(cnt<10){
-					if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.LONG_GRASS)||blo.getType().equals(Material.RED_ROSE)){
+					if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.GRASS)||blo.getType().equals(Material.POPPY)){
 						blo.setType(Material.ICE);
 				        new BukkitRunnable() {
 				        	Block clearblo=blo;
@@ -215,7 +215,7 @@ public class EntityDamageListener implements Listener {
 					new BukkitRunnable(){
 						Block blo2=blo;
 						public void run() {
-							if(blo2.getType().equals(Material.AIR)||blo2.getType().equals(Material.LONG_GRASS)||blo2.getType().equals(Material.RED_ROSE)){
+							if(blo2.getType().equals(Material.AIR)||blo2.getType().equals(Material.GRASS)||blo2.getType().equals(Material.POPPY)){
 								blo2.setType(Material.ICE);
 						        new BukkitRunnable() {
 						        	Block clearblo=blo2;
@@ -230,7 +230,7 @@ public class EntityDamageListener implements Listener {
 					new BukkitRunnable(){
 						Block blo2=blo;
 						public void run() {
-							if(blo2.getType().equals(Material.AIR)||blo2.getType().equals(Material.LONG_GRASS)||blo2.getType().equals(Material.RED_ROSE)){
+							if(blo2.getType().equals(Material.AIR)||blo2.getType().equals(Material.GRASS)||blo2.getType().equals(Material.POPPY)){
 								blo2.setType(Material.ICE);
 						        new BukkitRunnable() {
 						        	Block clearblo=blo2;

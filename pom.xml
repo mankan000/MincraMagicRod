@@ -30,21 +30,23 @@
 		    <id>dmulloy2-repo</id>
 		    <url>http://repo.dmulloy2.net/content/groups/public/</url>
 		 </repository>
-    </repositories>
-    <dependencies>
-
-	  <dependency>
-	    <groupId>com.comphenix.protocol</groupId>
-	    <artifactId>ProtocolLib</artifactId>
-	    <version>4.0.2</version>
-	  </dependency>
+		 <repository>
+            <id>public</id>
+            <name>Public Repositories</name>
+            <url>http://repo.mvdw-software.be/content/groups/public/</url>
+		</repository>
+	</repositories>
+	<dependencies>
 
 		<dependency>
+			<groupId>com.comphenix.protocol</groupId>
+			<artifactId>ProtocolLib</artifactId>
+			<version>4.0.2</version>
+		</dependency>
+		<dependency>
 			<groupId>org.bukkit</groupId>
-			<artifactId>craftbukkit</artifactId>
-			<version>1.12-R0.1-SNAPSHOT</version>
-			<type>jar</type>
-			<scope>compile</scope>
+			<artifactId>bukkit</artifactId>
+			<version>18w02a-R0.1-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
