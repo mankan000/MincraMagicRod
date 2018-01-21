@@ -31,13 +31,12 @@
 		    <url>http://repo.dmulloy2.net/content/groups/public/</url>
 		 </repository>
 		 <repository>
-            <id>public</id>
-            <name>Public Repositories</name>
-            <url>http://repo.mvdw-software.be/content/groups/public/</url>
+			<id>public</id>
+			<name>Public Repositories</name>
+			<url>http://repo.mvdw-software.be/content/groups/public/</url>
 		</repository>
 	</repositories>
 	<dependencies>
-
 		<dependency>
 			<groupId>com.comphenix.protocol</groupId>
 			<artifactId>ProtocolLib</artifactId>

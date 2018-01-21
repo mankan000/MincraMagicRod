@@ -1,15 +1,20 @@
 package mincra.magicrod.rod;
 
-import mincra.magicrod.main.Magic;
-import mincra.magicrod.version.Version;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
-import org.bukkit.entity.*;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Monster;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.WaterMob;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
+
+import mincra.magicrod.main.Magic;
+import mincra.magicrod.version.Version;
 
 public class AiceRod_4 extends BukkitRunnable{
 	Player player;
@@ -33,7 +38,7 @@ public class AiceRod_4 extends BukkitRunnable{
 					for(Location l:Magic.ice){
 						loc2.add(l.getX(),l.getY(),l.getZ());
 						final Block blo=loc2.getBlock();
-						if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.LONG_GRASS)||blo.getType().equals(Material.RED_ROSE)||blo.getType().equals(Material.SNOW)){
+						if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.GRASS)||blo.getType().equals(Material.POPPY)||blo.getType().equals(Material.SNOW)){
 							blo.setType(Material.ICE);
 					        new BukkitRunnable() {
 					        	Block clearblo=blo;
@@ -47,7 +52,7 @@ public class AiceRod_4 extends BukkitRunnable{
 					for(Location l:Magic.ice_2){
 						loc2.add(l.getX(),l.getY(),l.getZ());
 						final Block blo=loc2.getBlock();
-						if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.LONG_GRASS)||blo.getType().equals(Material.RED_ROSE)||blo.getType().equals(Material.SNOW)){
+						if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.GRASS)||blo.getType().equals(Material.POPPY)||blo.getType().equals(Material.SNOW)){
 							blo.setType(Material.ICE);
 					        new BukkitRunnable() {
 					        	Block clearblo=blo;
