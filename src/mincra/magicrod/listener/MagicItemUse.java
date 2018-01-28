@@ -91,6 +91,9 @@ public class MagicItemUse extends Skill implements Listener {
 						if(BossBarAPI.hasBar(player)==false&&event.getRightClicked() instanceof Player){
 							Player player2=(Player) event.getRightClicked();
 							String number = lore.substring(lore.indexOf(":")+1);
+							if(player.hasPermission("mincra.admin.debug")){
+								player.sendMessage(ChatColor.GRAY+"デバッグ01");
+							}
 							switch(number){
 								case "4-1":
 									rod401(player,player2,item);
@@ -266,13 +269,18 @@ public class MagicItemUse extends Skill implements Listener {
 				}
 			}
 		}else if((event.getAction().equals(Action.RIGHT_CLICK_AIR)||event.getAction().equals(Action.RIGHT_CLICK_BLOCK))){
-			if(event.getItem()!=null&&event.getItem().getItemMeta().hasLore()){
-				final Player player = event.getPlayer();
-				String lore = player.getInventory().getItemInMainHand().getItemMeta().getLore().get(0);
+			final Player player = event.getPlayer();
+			if(player.getInventory().getItemInMainHand().getType()!=Material.AIR&&player.getInventory().getItemInMainHand().getItemMeta().hasLore()==true){
+				if(player.hasPermission("mincra.admin.debug")){
+					player.sendMessage(ChatColor.GRAY+"デバッグ02");
+				}
+				String lore =  player.getInventory().getItemInMainHand().getItemMeta().getLore().get(0);
 				lore = ChatColor.stripColor(lore);
+				if(player.hasPermission("mincra.admin.debug")){
+					player.sendMessage(ChatColor.GRAY+lore);
+				}
 				int num = lore.indexOf(":");
 				if(num!=-1){
-
 				switch(lore.substring(0, num)){
 				case"ROD番号":
 					if(BossBarAPI.hasBar(player)==false){
@@ -354,8 +362,12 @@ public class MagicItemUse extends Skill implements Listener {
 									default:
 										break;
 								}
-								if(event.getItem().getDurability()!=0){
-									player.chat("/mmr ikou");
+								//よくわからないのでコメントアウト
+								//if(event.getItem().getDurability()!=0){
+								//	player.chat("/mmr ikou");
+								//}
+								if(player.hasPermission("mincra.admin.debug")){
+									player.sendMessage(ChatColor.GRAY+"デバッグ04");
 								}
 								break;
 							case ENCHANTED_BOOK:
@@ -399,9 +411,9 @@ public class MagicItemUse extends Skill implements Listener {
 									default:
 										break;
 								}
-								if(event.getItem().getDurability()!=0){
-									player.chat("/mmr ikou");
-								}
+								//if(event.getItem().getDurability()!=0){
+								//	player.chat("/mmr ikou");
+								//}
 								break;
 							case DIAMOND_PICKAXE:
 								switch(lore.substring(lore.indexOf(":")+1)){
@@ -477,7 +489,6 @@ public class MagicItemUse extends Skill implements Listener {
 				return;
 				//空気を所持時の右クリックイベントは出ないので,左クリックのみ
 			}else  if(event.getPlayer().isSneaking()){
-				final Player player = event.getPlayer();
 				new BukkitRunnable(){
 					@Override
 					public void run() {
@@ -499,7 +510,9 @@ public class MagicItemUse extends Skill implements Listener {
 					}
 				}.runTaskAsynchronously(plugin);
 			}
-			}
+		}else{
+			return;
+		}
 	}
 	private void invisiblehandsLv3(final Player player,float cooltime) {
 		Util.debug(player.getName()+"が見えざる手Lv3を発動");
@@ -702,7 +715,6 @@ public class MagicItemUse extends Skill implements Listener {
 		super.blizard(player,8,8,8,4,100);
 	}
 
-	@SuppressWarnings("deprecation")
 	private Boolean expeRod_101(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -742,7 +754,6 @@ public class MagicItemUse extends Skill implements Listener {
     	}
 	}
 
-	@SuppressWarnings("deprecation")
 	private Boolean expeRod_102(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -781,7 +792,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean expeRod_103(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -820,7 +830,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean jumpRod_201(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -859,7 +868,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean jumpRod_202(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -898,7 +906,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean jumpRod_203(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -938,7 +945,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean infernoRod_301(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -977,7 +983,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean infernoRod_302(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1016,7 +1021,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean infernoRod_303(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1055,7 +1059,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod401(Player player,Player player2,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1093,7 +1096,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod402(Player player,Player player2,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1131,7 +1133,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod403(Player player,Player player2,ItemStack item){
 		List<String> list=new ArrayList<String>();
 		list=item.getItemMeta().getLore();
@@ -1169,7 +1170,6 @@ public class MagicItemUse extends Skill implements Listener {
 			return false;
 		}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod404(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1211,7 +1211,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod405(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1254,7 +1253,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean cureRod_501(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1293,7 +1291,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean cureRod_502(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1332,7 +1329,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean cureRod_503(Player player,ItemStack item){
 		 List<String> list=new ArrayList<String>();
 	    	list=item.getItemMeta().getLore();
@@ -1371,7 +1367,6 @@ public class MagicItemUse extends Skill implements Listener {
 	    		return false;
 	    	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod601(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1411,7 +1406,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod602(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1451,7 +1445,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod603(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1491,7 +1484,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod701(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1528,7 +1520,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod702(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1565,7 +1556,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod703(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1603,7 +1593,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod704(Player player,ItemStack item){
 		 List<String> list=new ArrayList<String>();
 	    	list=item.getItemMeta().getLore();
@@ -1641,7 +1630,6 @@ public class MagicItemUse extends Skill implements Listener {
 	    		return false;
 	    	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod801(Player player,Player player2,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1679,7 +1667,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod802(Player player,Player player2,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1717,7 +1704,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod803(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1755,7 +1741,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean waterRod_901(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1793,7 +1778,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod1001(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1831,7 +1815,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod1002(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1869,7 +1852,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod1003(Player player,ItemStack item){
 		 List<String> list=new ArrayList<String>();
 	    	list=item.getItemMeta().getLore();
@@ -1907,7 +1889,6 @@ public class MagicItemUse extends Skill implements Listener {
 	    		return false;
 	    	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean rod1101(Player player,ItemStack item){
 		List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
@@ -1946,7 +1927,6 @@ public class MagicItemUse extends Skill implements Listener {
     		return false;
     	}
 	}
-	@SuppressWarnings("deprecation")
 	private Boolean lightningBook(Player player,ItemStack item){
 	    List<String> list=new ArrayList<String>();
     	list=item.getItemMeta().getLore();
