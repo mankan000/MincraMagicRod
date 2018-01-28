@@ -1,6 +1,8 @@
 package mincra.magicrod.item;
 
-import mincra.magicrod.main.Magic;
+import java.util.Arrays;
+import java.util.List;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -8,8 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.Arrays;
-import java.util.List;
+import mincra.magicrod.main.Magic;
 
 public class MagicWeapon{
 	Magic plugin;
@@ -18,7 +19,7 @@ public class MagicWeapon{
 	public static ItemStack creeperBowLv2= new ItemStack(Material.BOW,1);
 	public static ItemStack aiceBowLv1= new ItemStack(Material.BOW,1);
 	public static ItemStack aiceBowLv2= new ItemStack(Material.BOW,1);
-	public static ItemStack ParalysisSword = new ItemStack(Material.GOLD_SWORD,1);
+	public static ItemStack ParalysisSword = new ItemStack(Material.GOLDEN_SWORD,1);
 	public static ItemStack ParalysisBow = new ItemStack(Material.BOW,1);
 	public static ItemStack MechanicsSword = new ItemStack(Material.DIAMOND_SWORD,1);
 	public static ItemStack MechanicsSwordLv2 = new ItemStack(Material.DIAMOND_SWORD,1);
@@ -95,7 +96,7 @@ public class MagicWeapon{
 					"nin",
 					" s ");
 			RecipeMagicWeapon1_1.setIngredient('s', Material.STICK);
-			RecipeMagicWeapon1_1.setIngredient('n', Material.NETHER_STALK);
+			RecipeMagicWeapon1_1.setIngredient('n', Material.NETHER_WART);
 			RecipeMagicWeapon1_1.setIngredient('i', Material.IRON_BLOCK);
 		plugin.getServer().addRecipe(RecipeMagicWeapon1_1);
 
@@ -182,7 +183,7 @@ public class MagicWeapon{
 					"sgs",
 					" s ");
 			RecipeParalysisSword.setIngredient('s', Material.SLIME_BLOCK);
-			RecipeParalysisSword.setIngredient('g', Material.GOLD_SWORD);
+			RecipeParalysisSword.setIngredient('g', Material.GOLDEN_SWORD);
 		plugin.getServer().addRecipe(RecipeParalysisSword);
 
 		ItemMeta MechanicsSword_Meta = MechanicsSword.getItemMeta();

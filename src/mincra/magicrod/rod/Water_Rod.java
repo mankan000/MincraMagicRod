@@ -1,12 +1,13 @@
 package mincra.magicrod.rod;
 
-import mincra.magicrod.version.Version;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
+
+import mincra.magicrod.version.Version;
 
 public class Water_Rod extends BukkitRunnable{
 	Player player;
@@ -18,7 +19,7 @@ public class Water_Rod extends BukkitRunnable{
 	@Override
 	public void run() {
 		Location loc=player.getLocation();
-		if(loc.add(0, 1, 0).getBlock().getType().equals(Material.STATIONARY_WATER)){
+		if(loc.add(0, 1, 0).getBlock().getType().equals(Material.LEGACY_STATIONARY_WATER)){
 			float yaw=loc.getYaw();
 			float pitch=loc.getPitch();
 			float yswim=(float) (-Math.tan(pitch*Math.PI / 180.0)*0.6F);

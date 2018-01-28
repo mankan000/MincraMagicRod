@@ -1,6 +1,8 @@
 package mincra.magicrod.item;
 
-import mincra.magicrod.main.Magic;
+import java.util.Arrays;
+import java.util.List;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -9,8 +11,7 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.MaterialData;
 
-import java.util.Arrays;
-import java.util.List;
+import mincra.magicrod.main.Magic;
 
 public class MagicRod{
 	final public static ItemStack QuartzWand= new ItemStack(Material.BLAZE_ROD,1);
@@ -54,7 +55,7 @@ public class MagicRod{
 	final public static ItemStack BeastsBookLv3= new ItemStack(Material.ENCHANTED_BOOK,1);
 	final public static ItemStack CartBookLv1= new ItemStack(Material.ENCHANTED_BOOK,1);
 	final public static ItemStack LightningBookLv1= new ItemStack(Material.ENCHANTED_BOOK,1);
-	
+
 	final public static List<String> QuartzWand_Lore = Arrays.asList
 			(ChatColor.AQUA+			"ROD番号:0-1"
 			,ChatColor.AQUA+			"攻撃用魔法。"
@@ -371,7 +372,7 @@ public class MagicRod{
 						" ed",
 						" be",
 						"b  ");
-				xrod1.setIngredient('e', Material.EXP_BOTTLE);
+				xrod1.setIngredient('e', Material.EXPERIENCE_BOTTLE);
 				xrod1.setIngredient('b', Material.BLAZE_ROD);
 				xrod1.setIngredient('d', Material.DIAMOND);
 				plugin.getServer().addRecipe(xrod1);
@@ -384,7 +385,7 @@ public class MagicRod{
 						" de",
 						" bd",
 						"b  ");
-				ExperienceWandLv2_Recipe.setIngredient('e', Material.EXP_BOTTLE);
+				ExperienceWandLv2_Recipe.setIngredient('e', Material.EXPERIENCE_BOTTLE);
 				ExperienceWandLv2_Recipe.setIngredient('b', Material.BLAZE_ROD);
 				ExperienceWandLv2_Recipe.setIngredient('d', Material.DIAMOND);
 				plugin.getServer().addRecipe(ExperienceWandLv2_Recipe);
@@ -397,7 +398,7 @@ public class MagicRod{
 						"bde",
 						" bd",
 						"b b");
-				ExperienceWandLv3_Recipe.setIngredient('e', Material.EXP_BOTTLE);
+				ExperienceWandLv3_Recipe.setIngredient('e', Material.EXPERIENCE_BOTTLE);
 				ExperienceWandLv3_Recipe.setIngredient('b', Material.BLAZE_ROD);
 				ExperienceWandLv3_Recipe.setIngredient('d', Material.DIAMOND_BLOCK);
 				plugin.getServer().addRecipe(ExperienceWandLv3_Recipe);
@@ -424,8 +425,7 @@ public class MagicRod{
 						"wqw");
 				xrod2_2.setIngredient('w', Material.FEATHER);
 				xrod2_2.setIngredient('b', Material.BLAZE_ROD);
-				MaterialData Lapis=new MaterialData(Material.INK_SACK);
-				Lapis.setData((byte) 4);
+				MaterialData Lapis=new MaterialData(Material.LAPIS_LAZULI);
 				xrod2_2.setIngredient('q', Lapis);
 				plugin.getServer().addRecipe(xrod2_2);
 		ItemMeta irod2_3=JumpWandLv3.getItemMeta();
@@ -468,7 +468,7 @@ public class MagicRod{
 				xrod3_2.setIngredient('l', Material.LAVA_BUCKET);
 				xrod3_2.setIngredient('b', Material.BLAZE_ROD);
 				xrod3_2.setIngredient('d', Material.GOLD_BLOCK);
-				xrod3_2.setIngredient('g', Material.GOLD_HELMET);
+				xrod3_2.setIngredient('g', Material.GOLDEN_HELMET);
 				plugin.getServer().addRecipe(xrod3_2);
 		ItemMeta irod3_3=InfernoWandLv3.getItemMeta();
 			irod3_3.setDisplayName(ChatColor.RED+""+ChatColor.BOLD+"インフェルノ杖lv3");
@@ -505,7 +505,7 @@ public class MagicRod{
 						"iii",
 						" b ",
 						" b ");
-				xrod4_2.setIngredient('i', Material.GOLD_PICKAXE);
+				xrod4_2.setIngredient('i', Material.GOLDEN_PICKAXE);
 				xrod4_2.setIngredient('b', Material.BLAZE_ROD);
 				plugin.getServer().addRecipe(xrod4_2);
 		ItemMeta irod4_3=DestroyWandLv3.getItemMeta();
@@ -631,7 +631,7 @@ public class MagicRod{
 						" as",
 						" ba",
 						"b  ");
-				xrod7.setIngredient('s', Material.SNOW_BALL);
+				xrod7.setIngredient('s', Material.SNOWBALL);
 				xrod7.setIngredient('a', Material.PACKED_ICE);
 				xrod7.setIngredient('b', Material.BLAZE_ROD);
 				plugin.getServer().addRecipe(xrod7);
@@ -696,7 +696,7 @@ public class MagicRod{
 						" oc",
 						" bo",
 						"b  ");
-				xrod8_2.setIngredient('c', Material.GOLD_CHESTPLATE);
+				xrod8_2.setIngredient('c', Material.GOLDEN_CHESTPLATE);
 				xrod8_2.setIngredient('o', Material.OBSIDIAN);
 				xrod8_2.setIngredient('b', Material.BLAZE_ROD);
 				plugin.getServer().addRecipe(xrod8_2);
@@ -790,7 +790,7 @@ public class MagicRod{
 						"ede",
 						"dbd",
 						"ppp");
-				xrod12.setIngredient('e', Material.EYE_OF_ENDER);
+				xrod12.setIngredient('e', Material.ENDER_EYE);
 				xrod12.setIngredient('d', Material.DIAMOND);
 				xrod12.setIngredient('b', Material.BOOK);
 				xrod12.setIngredient('p', Material.BLAZE_POWDER);

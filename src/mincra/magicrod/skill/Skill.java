@@ -215,7 +215,7 @@ public class Skill{
 				for(Location l:Magic.ice){
 					loc2.add(l.getX(),l.getY(),l.getZ());
 					final Block blo=loc2.getBlock();
-					if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.LONG_GRASS)||blo.getType().equals(Material.RED_ROSE)||blo.getType().equals(Material.SNOW)){
+					if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.GLASS)||blo.getType().equals(Material.POPPY)||blo.getType().equals(Material.SNOW)){
 						blo.setType(Material.ICE);
 				        new BukkitRunnable() {
 				        	Block clearblo=blo;
@@ -229,7 +229,7 @@ public class Skill{
 				for(Location l:Magic.ice_2){
 					loc2.add(l.getX(),l.getY(),l.getZ());
 					final Block blo=loc2.getBlock();
-					if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.LONG_GRASS)||blo.getType().equals(Material.RED_ROSE)||blo.getType().equals(Material.SNOW)){
+					if(blo.getType().equals(Material.AIR)||blo.getType().equals(Material.GLASS)||blo.getType().equals(Material.POPPY)||blo.getType().equals(Material.SNOW)){
 						blo.setType(Material.ICE);
 				        new BukkitRunnable() {
 				        	Block clearblo=blo;

@@ -170,7 +170,8 @@ public class MagicApi {
 			case ENCHANTED_BOOK:
 			case BLAZE_ROD:
 			case BLAZE_POWDER:
-			case INK_SACK:
+			case LAPIS_LAZULI:
+			case DANDELION_YELLOW:
 			case GHAST_TEAR:
 				return true;
 			default:
