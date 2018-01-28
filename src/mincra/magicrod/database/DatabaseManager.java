@@ -833,7 +833,6 @@ public class DatabaseManager extends MagicApi{
     /**
      * Converts a serialized inventoryString into an Inventory object
      */
-    @SuppressWarnings("deprecation")
 	public static Inventory StringToInventory (String invName,int num,String invString)
     {
         String[] serializedBlocks = invString.split(";");
@@ -858,7 +857,7 @@ public class DatabaseManager extends MagicApi{
                 String[] itemAttribute = itemInfo.split("@");
                 if (itemAttribute[0].equals("t"))
                 {
-                    is = new ItemStack(Material.getMaterial(Integer.valueOf(itemAttribute[1])));
+                    is = new ItemStack(Material.getMaterial(String.valueOf(itemAttribute[1])));
                     createdItemStack = true;
                 }
                 else if (itemAttribute[0].equals("d") && createdItemStack)
@@ -871,7 +870,7 @@ public class DatabaseManager extends MagicApi{
                 }
                 else if (itemAttribute[0].equals("e") && createdItemStack)
                 {
-                    is.addUnsafeEnchantment(Enchantment.getById(Integer.valueOf(itemAttribute[1])), Integer.valueOf(itemAttribute[2]));
+                    is.addUnsafeEnchantment(Enchantment.getByName(String.valueOf(itemAttribute[1])), Integer.valueOf(itemAttribute[2]));
                 }
                 else if (itemAttribute[0].equals("n") && createdItemStack)
                 {

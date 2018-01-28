@@ -14,25 +14,10 @@ public class Version{
 
 	public Version() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 		switch(Bukkit.getServer().getClass().getPackage().getName()){
-			//1.7.10
-			/*case "org.bukkit.craftbukkit.v1_7_R4":
-				Bukkit.getLogger().info("[MincraMagicRod] v1_7_R4");
-				effect = (EffectInterface) Class.forName("mincra.magicrod.version.v_1_7_R4.Effect").newInstance();
-				break;*/
-			//1.8
-			case "org.bukkit.craftbukkit.v1_8_R1":
-				effect = (EffectInterface) Class.forName("mincra.magicrod.version.v_1_8_R1.Effect").newInstance();
-				break;
-			case "org.bukkit.craftbukkit.v1_8_R2":
-				effect = (EffectInterface) Class.forName("mincra.magicrod.version.v_1_8_R2.Effect").newInstance();
-				break;
-			case "org.bukkit.craftbukkit.v1_8_R3":
-				effect = (EffectInterface) Class.forName("mincra.magicrod.version.v_1_8_R3.Effect").newInstance();
-				break;
-			case "org.bukkit.craftbukkit.v1_10_R1":
-				effect = (EffectInterface) Class.forName("mincra.magicrod.version.v_1_10_R1.Effect").newInstance();
-				break;
 			case "org.bukkit.craftbukkit.v1_12_R1":
+				effect = (EffectInterface) Class.forName("mincra.magicrod.version.v_1_12_R1.Effect").newInstance();
+				break;
+			case "org.bukkit.craftbukkit.v1_13_R1":
 				effect = (EffectInterface) Class.forName("mincra.magicrod.version.v_1_12_R1.Effect").newInstance();
 				break;
 			default:

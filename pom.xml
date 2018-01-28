@@ -42,12 +42,26 @@
 			<artifactId>ProtocolLib</artifactId>
 			<version>4.0.2</version>
 		</dependency>
+<!--		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>1.12.2-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+-->
+<!--Bukkit API-->
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
 			<version>18w02a-R0.1-SNAPSHOT</version>
 		</dependency>
-
+<!--Spigot API and NMS-->
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot</artifactId>
+			<version>1.12.2-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>me.confuser</groupId>
 			<artifactId>BossBarAPI</artifactId>
@@ -63,34 +77,5 @@
 			<scope>system</scope>
 			<systemPath>${basedir}/lib/NoteBlockAPI-1.1.0.jar</systemPath>
 		</dependency>
-
-        <dependency>
-	      <groupId>org.bukkit</groupId>
-	      <artifactId>craftbukkit_1.7.10</artifactId>
-	      <version>1.7.10</version>
-	      <scope>system</scope>
-	      <systemPath>${basedir}/lib/craftbukkit1710.jar</systemPath>
-  		</dependency>
-  		<dependency>
-	      <groupId>org.bukkit</groupId>
-	      <artifactId>craftbukkit_1.8</artifactId>
-	      <version>1.8</version>
-	      <scope>system</scope>
-	      <systemPath>${basedir}/lib/craftbukkit180.jar</systemPath>
-  		</dependency>
-  		<dependency>
-	      <groupId>org.bukkit</groupId>
-	      <artifactId>craftbukkit_1.8.3</artifactId>
-	      <version>1.8.3</version>
-	      <scope>system</scope>
-	      <systemPath>${basedir}/lib/craftbukkit183.jar</systemPath>
-  		</dependency>
-  		<dependency>
-	      <groupId>org.bukkit</groupId>
-	      <artifactId>craftbukkit_1.8.4</artifactId>
-	      <version>1.8.4</version>
-	      <scope>system</scope>
-	      <systemPath>${basedir}/lib/craftbukkit184.jar</systemPath>
-  		</dependency>
     </dependencies>
 </project>
