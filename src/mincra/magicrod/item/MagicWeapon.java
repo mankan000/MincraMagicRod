@@ -1,15 +1,17 @@
 package mincra.magicrod.item;
 
-import mincra.magicrod.main.Magic;
+import java.util.Arrays;
+import java.util.List;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.Arrays;
-import java.util.List;
+import mincra.magicrod.main.Magic;
 
 public class MagicWeapon{
 	Magic plugin;
@@ -82,14 +84,14 @@ public class MagicWeapon{
 
 	public MagicWeapon(Magic _plugin) {
 		plugin=_plugin;
-
+		final NamespacedKey NamespaceKeyForRecipe= new NamespacedKey(_plugin, "mincra");
 		ItemMeta MetaMagicWeapon1_1 = bloodSword.getItemMeta();
 		MetaMagicWeapon1_1.setDisplayName(ChatColor.DARK_RED+""+ChatColor.BOLD+"ブラッドソード");
 		MetaMagicWeapon1_1.setLore(bloodSwordLores);
 		bloodSword.setItemMeta(MetaMagicWeapon1_1);
 		bloodSword.addUnsafeEnchantment(Enchantment.DAMAGE_ALL,2);
 		bloodSword.addUnsafeEnchantment(Enchantment.DURABILITY,5);
-			ShapedRecipe RecipeMagicWeapon1_1 = new ShapedRecipe(bloodSword);
+			ShapedRecipe RecipeMagicWeapon1_1 = new ShapedRecipe(NamespaceKeyForRecipe,bloodSword);
 			RecipeMagicWeapon1_1.shape(
 					"nin",
 					"nin",
@@ -104,7 +106,7 @@ public class MagicWeapon{
 		MetaMagicWeapon2_1.setLore(creeperBowLv1_Lores);
 		creeperBow.setItemMeta(MetaMagicWeapon2_1);
 		creeperBow.addUnsafeEnchantment(Enchantment.DURABILITY,5);
-			ShapedRecipe RecipeMagicWeapon2_1 = new ShapedRecipe(creeperBow);
+			ShapedRecipe RecipeMagicWeapon2_1 = new ShapedRecipe(NamespaceKeyForRecipe,creeperBow);
 			RecipeMagicWeapon2_1.shape(
 					"ttt",
 					"tbt",
@@ -118,7 +120,7 @@ public class MagicWeapon{
 		MetaMagicWeapon2_2.setLore(creeperBowLv2_Lores);
 		creeperBowLv2.setItemMeta(MetaMagicWeapon2_2);
 		creeperBowLv2.addUnsafeEnchantment(Enchantment.DURABILITY,6);
-			ShapedRecipe RecipeMagicWeapon2_2 = new ShapedRecipe(creeperBowLv2);
+			ShapedRecipe RecipeMagicWeapon2_2 = new ShapedRecipe(NamespaceKeyForRecipe,creeperBowLv2);
 			RecipeMagicWeapon2_2.shape(
 					"ddd",
 					"dbd",
@@ -132,7 +134,7 @@ public class MagicWeapon{
 		MetaMagicWeapon3.setLore(aiceBowLv1_Lores);
 		aiceBowLv1.setItemMeta(MetaMagicWeapon3);
 		aiceBowLv1.addUnsafeEnchantment(Enchantment.DURABILITY,5);
-			ShapedRecipe RecipeMagicWeapon3 = new ShapedRecipe(aiceBowLv1);
+			ShapedRecipe RecipeMagicWeapon3 = new ShapedRecipe(NamespaceKeyForRecipe,aiceBowLv1);
 			RecipeMagicWeapon3.shape(
 					"ddd",
 					"dbd",
@@ -146,7 +148,7 @@ public class MagicWeapon{
 		MetaMagicWeapon3_2.setLore(aiceBowLv2_Lores);
 		aiceBowLv2.setItemMeta(MetaMagicWeapon3_2);
 		aiceBowLv2.addUnsafeEnchantment(Enchantment.DURABILITY,5);
-			ShapedRecipe RecipeMagicWeapon3_2 = new ShapedRecipe(aiceBowLv2);
+			ShapedRecipe RecipeMagicWeapon3_2 = new ShapedRecipe(NamespaceKeyForRecipe,aiceBowLv2);
 			RecipeMagicWeapon3_2.shape(
 					"dxd",
 					"ebe",
@@ -162,7 +164,7 @@ public class MagicWeapon{
 		ParalysisBow_Meta.setLore(ParalysisBow_Lore);
 		ParalysisBow.setItemMeta(ParalysisBow_Meta);
 		ParalysisBow.addUnsafeEnchantment(Enchantment.DURABILITY,5);
-			ShapedRecipe RecipeParalysisBow = new ShapedRecipe(ParalysisBow);
+			ShapedRecipe RecipeParalysisBow = new ShapedRecipe(NamespaceKeyForRecipe,ParalysisBow);
 			RecipeParalysisBow.shape(
 					"sss",
 					"sbs",
@@ -176,7 +178,7 @@ public class MagicWeapon{
 		ParalysisSword_Meta.setLore(ParalysisSword_Lore);
 		ParalysisSword.setItemMeta(ParalysisSword_Meta);
 		ParalysisSword.addUnsafeEnchantment(Enchantment.DURABILITY,5);
-			ShapedRecipe RecipeParalysisSword = new ShapedRecipe(ParalysisSword);
+			ShapedRecipe RecipeParalysisSword = new ShapedRecipe(NamespaceKeyForRecipe,ParalysisSword);
 			RecipeParalysisSword.shape(
 					" s ",
 					"sgs",
@@ -190,7 +192,7 @@ public class MagicWeapon{
 		MechanicsSword_Meta.setLore(MechanicsSword_Lore);
 		MechanicsSword.setItemMeta(MechanicsSword_Meta);
 		MechanicsSword.addUnsafeEnchantment(Enchantment.DURABILITY,5);
-			ShapedRecipe RecipeMechanicsSword = new ShapedRecipe(MechanicsSword);
+			ShapedRecipe RecipeMechanicsSword = new ShapedRecipe(NamespaceKeyForRecipe,MechanicsSword);
 			RecipeMechanicsSword.shape(
 					"  d",
 					" d ",
@@ -204,7 +206,7 @@ public class MagicWeapon{
 		MechanicsSwordLv2_Meta.setLore(MechanicsSwordLv2_Lore);
 		MechanicsSwordLv2.setItemMeta(MechanicsSwordLv2_Meta);
 		MechanicsSwordLv2.addUnsafeEnchantment(Enchantment.DURABILITY,5);
-			ShapedRecipe RecipeMechanicsSwordLv2 = new ShapedRecipe(MechanicsSwordLv2);
+			ShapedRecipe RecipeMechanicsSwordLv2 = new ShapedRecipe(NamespaceKeyForRecipe,MechanicsSwordLv2);
 			RecipeMechanicsSwordLv2.shape(
 					"ddd",
 					"dsd",
@@ -218,7 +220,7 @@ public class MagicWeapon{
 		SleepSword_Meta.setLore(SleepSword_Lore);
 		SleepSword.setItemMeta(SleepSword_Meta);
 		SleepSword.addUnsafeEnchantment(Enchantment.DURABILITY,5);
-			ShapedRecipe RecipeSleepSword = new ShapedRecipe(SleepSword);
+			ShapedRecipe RecipeSleepSword = new ShapedRecipe(NamespaceKeyForRecipe,SleepSword);
 			RecipeSleepSword.shape(
 					"ggg",
 					"gsg",
@@ -232,7 +234,7 @@ public class MagicWeapon{
 		SleepBow_Meta.setLore(SleepBow_Lore);
 		SleepBow.setItemMeta(SleepBow_Meta);
 		SleepBow.addUnsafeEnchantment(Enchantment.DURABILITY,5);
-			ShapedRecipe RecipeSleepBow = new ShapedRecipe(SleepBow);
+			ShapedRecipe RecipeSleepBow = new ShapedRecipe(NamespaceKeyForRecipe,SleepBow);
 			RecipeSleepBow.shape(
 					"ggg",
 					"gbg",
